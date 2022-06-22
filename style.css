@@ -145,7 +145,7 @@ header .iconsNavigation button svg {
     align-items: flex-start;
     gap: 1.5rem;
     
-    padding-inline: 4rem;
+    padding-inline: 2rem;
 }
 
 .productImage header h1 {
@@ -164,6 +164,15 @@ header .iconsNavigation button svg {
     font-weight: 400;
     color: var(--color-gray);
 }
+
+.productImage header span {
+    display: flex;
+    gap: 0.6rem;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+
 
 .productImage header label {
     width: 100%;
@@ -212,7 +221,7 @@ header .iconsNavigation button svg {
 
 
 /* RESPONSIVE ============================== */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .wrapper {
         width: min(112rem, 100%);
     }
@@ -240,8 +249,28 @@ header .iconsNavigation button svg {
         border-bottom: initial;
     }
 
+    nav.navigation .menu ul li a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: var(--color-red);
+
+        position: relative;
+        bottom: -0.9rem;
+        left: -0.3rem;
+    
+        display: block;
+
+        transition: 300ms;
+    }
+
     header button#menuButtonOpen {
         display: none;
+    }
+
+    nav.navigation .menu ul li a:hover::after {
+        width: 100%;
+        padding-inline: 0.4rem;
     }
 
     #home .productImage {
@@ -249,24 +278,52 @@ header .iconsNavigation button svg {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        padding-top: 5rem;
-        padding-inline: 9rem;
+        padding-top: 6rem;
+        padding-inline: 2rem;
     }
 
-    #home .productImage img {
-        width: 30rem;
-        padding-bottom: 1.5rem;
     
+    #home .productImage header {
+        padding-inline: 0rem;
     }
+
+
+    .productImage header h1 {
+        font-size: 3rem;
+    }
+    
+    .productImage header h2 {
+        font-size: 1.9rem;
+    }
+    
+    .productImage header h2 > p {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    .productImage header label {
+        margin-top: 1rem;
+    }
+
+
  
     .wrapper .descriptions {
-        width: 100%;
+        width: 97%;
+        margin-top: 3rem;
     }
 
     .wrapper .descriptions ul {
         flex-direction: row;
         gap: 5rem;
 
-        padding-inline: 10rem;
-    } 
+        padding-inline: 1%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #home .productImage img {
+        width: 30rem;
+        padding-bottom: 1.5rem;
+    
+    }
 }
