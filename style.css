@@ -127,11 +127,14 @@ header .iconsNavigation button svg {
 }
 
 /* HOME ============================== */
+#home .wrapper {
+    padding-block: 3rem;
+}
+
 #home .productImage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
 }
 
 #home .productImage img {
