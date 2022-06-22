@@ -175,8 +175,6 @@ header .iconsNavigation button svg {
     font-weight: 700;
 }
 
-
-
 .productImage header label {
     width: 100%;
     display: grid;
@@ -198,10 +196,14 @@ header .iconsNavigation button svg {
     font-weight: 700;
 
     border: none;
+
+    cursor: pointer;
+
+    transition: 500ms;
 }
 
 .productImage header button:hover {
-    filter: brightness(1.1);
+    background-color: var(--color-black);
 }
 
 .wrapper .descriptions {
