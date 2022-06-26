@@ -17,7 +17,7 @@ const initialColors = {
 const darkMode = {
     colorBlack: '#d1d5db',
     grayDark: '#d1d5db',
-    colorWhite: '#161616',
+    colorWhite: '#201b2c',
     colorBorder: '#d2d2d2',
     colorDescription: '#fdba74' 
 }
