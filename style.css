@@ -16,6 +16,7 @@ html {
     font-size: 62.5%; /* 10px = 1rem  d1d5db*/
 }
 
+
 /* Geral ============================= */
 html,
 body {
@@ -59,12 +60,26 @@ header a.logo svg {
     height: 100%;
 }
 
+header a.logo svg path:nth-child(1) {
+    fill: var(--color-gray-dark);
+}
+
 .navigation header .menu {
     display: none;
 }
 
-.navigation header #menuButtonClose svg path {
-    stroke: #161616;
+.iconsNavigation button svg {
+    fill: var(--color-white);
+}
+
+.iconsNavigation button svg path{
+    stroke: var(--color-black);
+}
+
+.navigation header a svg,
+.navigation header #menuButtonClose svg,
+.navigation header #menuButtonOpen svg {
+    fill: var(--color-black); 
 }
 
 .navigation header #menuButtonClose  {
@@ -79,11 +94,11 @@ header a.logo svg {
     top: 5rem;
     left: 0;
 
-    background-color: #fff;
+    background-color: var(--color-white);
 
     text-align: center;
 
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid var(--color-border);
 
     display: flex;
     flex-direction: column;
@@ -132,6 +147,21 @@ header .iconsNavigation button svg {
     background-color: transparent;
     border: none;
 }
+
+/* DARK MODE ========================== */
+.themeLight,
+.themeDark {
+    display: none;
+} 
+.themeDark {
+    display: block;
+}
+
+.themeLight {
+    display: none;
+}
+
+
 
 /* HOME ============================== */
 #home .wrapper {
@@ -197,7 +227,7 @@ header .iconsNavigation button svg {
 .productImage header button {
     height: 3.5rem;
     background-color: var(--color-red);
-    color: #fff;
+    color: var(--color-white);
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 700;
@@ -216,7 +246,6 @@ header .iconsNavigation button svg {
 .wrapper .descriptions {
     width: 80%; 
     background-color: var(--color-description);
-
     
     border-radius: 1.2rem;
     padding-inline: 5rem;
